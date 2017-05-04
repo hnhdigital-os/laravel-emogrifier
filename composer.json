@@ -1,0 +1,22 @@
+{
+    "name": "bluora/laravel-emogrifier",
+    "description": "Converts CSS styles into inline style attributes in your HTML code",
+    "keywords": ["laravel","email", "css", "pre-processing"],
+    "license": "MIT",
+    "homepage": "http://www.pelagodesign.com/sidecar/emogrifier/",
+    "authors": [
+        {
+            "name": "Rocco Howard",
+            "email": "rocco@bluora.com.au"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "jjriv/emogrifier": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bluora\\LaravelEmogrifier\\": "src/"
+        }
+    }
+}
