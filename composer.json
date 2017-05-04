@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "jjriv/emogrifier": "^1.2"
+        "pelago/emogrifier": "^1.2"
     },
     "autoload": {
         "psr-4": {
