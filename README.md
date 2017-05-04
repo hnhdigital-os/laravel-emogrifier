@@ -1,6 +1,6 @@
 # Laravel Number Converter
 
-This package provides a Laravel wrapper to the [PHP-Number-Converter](https://github.com/bluora/php-number-converter) package that provides the ability to convert a numerical number to a word, roman numeral, or an ordinal suffix.
+This package provides a Laravel wrapper to the [Emogrifier](https://github.com/jjriv/emogrifier) package that provides the ability to convert CSS styles into inline style attributes in your HTML code.
 
 [![Latest Stable Version](https://poser.pugx.org/bluora/laravel-emogrifier/v/stable.svg)](https://packagist.org/packages/bluora/laravel-emogrifier) [![Total Downloads](https://poser.pugx.org/bluora/laravel-emogrifier/downloads.svg)](https://packagist.org/packages/bluora/laravel-emogrifier) [![Latest Unstable Version](https://poser.pugx.org/bluora/laravel-emogrifier/v/unstable.svg)](https://packagist.org/packages/bluora/laravel-emogrifier) [![License](https://poser.pugx.org/bluora/laravel-emogrifier/license.svg)](https://packagist.org/packages/bluora/laravel-emogrifier)
 
@@ -29,7 +29,7 @@ Enable an alias by editing config/app.php:
 ```php
 'aliases' => array(
     ...
-    'NumConvert' => 'Bluora\LaravelEmogrifier\NFacade',
+    'Emogrifier' => 'Bluora\LaravelEmogrifier\Facade',
     ...
 )
 ```
