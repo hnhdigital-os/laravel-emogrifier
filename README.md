@@ -19,7 +19,7 @@ Enable the service provider by editing config/app.php:
 ```php
 'providers' => array(
     ...
-    'Bluora\LaravelEmogrifier\ServiceProvider',
+    Bluora\LaravelEmogrifier\ServiceProvider::class,
     ...
 )
 ```
@@ -29,7 +29,7 @@ Enable an alias by editing config/app.php:
 ```php
 'aliases' => array(
     ...
-    'Emogrifier' => 'Bluora\LaravelEmogrifier\Facade',
+    'Emogrifier' => Bluora\LaravelEmogrifier\Facade::class,
     ...
 )
 ```
