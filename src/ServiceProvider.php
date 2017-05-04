@@ -2,7 +2,6 @@
 
 namespace Bluora\LaravelEmogrifier;
 
-use Pelago\Emogrifier;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
