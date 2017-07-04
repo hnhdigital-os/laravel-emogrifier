@@ -1,5 +1,5 @@
 {
-    "name": "bluora/laravel-emogrifier",
+    "name": "hnhdigital-os/laravel-emogrifier",
     "description": "Converts CSS styles into inline style attributes in your HTML code",
     "keywords": ["laravel","email", "css", "pre-processing"],
     "license": "MIT",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Bluora\\LaravelEmogrifier\\": "src/"
+            "HnhDigital\\LaravelEmogrifier\\": "src/"
         }
     }
 }
