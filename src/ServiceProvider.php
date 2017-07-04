@@ -1,6 +1,6 @@
 <?php
 
-namespace Bluora\LaravelEmogrifier;
+namespace HnhDigital\LaravelEmogrifier;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
