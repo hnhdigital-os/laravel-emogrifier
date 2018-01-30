@@ -1,22 +1,49 @@
 {
     "name": "hnhdigital-os/laravel-emogrifier",
-    "description": "Converts CSS styles into inline style attributes in your HTML code",
+    "description": "A Laravel wrapper for emogrifier that converts CSS styles into inline style attributes in your HTML code.",
     "keywords": ["laravel","email", "css", "pre-processing"],
     "license": "MIT",
     "homepage": "http://www.pelagodesign.com/sidecar/emogrifier/",
     "authors": [
         {
             "name": "Rocco Howard",
-            "email": "rocco@bluora.com.au"
+            "email": "rocco@hnh.digital"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "pelago/emogrifier": "^1.2"
+        "php": ">=7.1.0",
+        "laravel/framework": ">=5.4",
+        "pelago/emogrifier": "2.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",        
+        "codeclimate/php-test-reporter": "dev-master",
+        "phpmd/phpmd" : "@stable"
     },
     "autoload": {
         "psr-4": {
-            "HnhDigital\\LaravelEmogrifier\\": "src/"
+            "HnhDigital\\Emogrifier\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HnhDigital\\Emogrifier\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": [
+            "composer phpunit && composer phpcs && composer phpmd"
+        ],
+        "phpunit": [
+            "phpunit"
+        ],
+        "phpcs": [
+            "phpcs -p -s --standard=PSR2 ./src ./tests"
+        ],
+        "phpmd": [
+            "phpmd ./src phpmd.xml"
+        ]
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace HnhDigital\LaravelEmogrifier;
+namespace HnhDigital\Emogrifier;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

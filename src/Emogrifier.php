@@ -1,6 +1,6 @@
 <?php
 
-namespace HnhDigital\LaravelEmogrifier;
+namespace HnhDigital\Emogrifier;
 
 use Pelago\Emogrifier as OriginalEmogrifier;
 
