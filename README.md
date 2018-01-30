@@ -65,7 +65,6 @@ Enable the service provider by editing config/app.php:
 ## Instructions
 
 ```php
-
 $output = Emogrifier::parse($html, $css);
 $output = app('Emogrifier')->parse($html, $css);
 
