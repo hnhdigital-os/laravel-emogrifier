@@ -22,6 +22,7 @@ This package has been developed by H&H|Digital, an Australian botique developer.
 * [Requirements](#requirements)
 * [Installation](#install)
 * [Configuration](#configuration)
+* [Instructions](#instructions)
 * [Contributing](#contributing)
 * [Credits](#credits)
 * [License](#license)
@@ -59,6 +60,15 @@ Enable the service provider by editing config/app.php:
     HnhDigital\Emogrifier\ServiceProvider::class,
     ...
 )
+```
+
+## Instructions
+
+```php
+
+$output = Emogrifier::parse($html, $css);
+$output = app('Emogrifier')->parse($html, $css);
+
 ```
 
 ## Contributing
