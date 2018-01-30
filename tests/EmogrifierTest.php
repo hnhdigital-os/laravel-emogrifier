@@ -21,12 +21,12 @@ class EmogrifierTest extends TestCase
 
         $output = $emogrifier->parse($html, $css);
 
-        $expected_output = "<!DOCTYPE html>
+        $expected_output = '<!DOCTYPE html>
 <html>
-<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head>
-<body><h1 style=\"font-size: 32px;\">Hello world!</h1></body>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body><h1 style="font-size: 32px;">Hello world!</h1></body>
 </html>
-";
+';
 
         $this->assertEquals($output, $expected_output);
     }
