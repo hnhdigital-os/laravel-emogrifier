@@ -30,4 +30,23 @@ class EmogrifierTest extends TestCase
 
         $this->assertEquals($output, $expected_output);
     }
+
+    /**
+     * Test inline output.
+     *
+     * @return void
+     */
+    public function testInlineOutput()
+    {
+        $emogrifier = new Emogrifier();
+
+        $html = '<html><h1>Hello world!</h1></html>';
+        $css = 'h1 {font-size: 32px;}';
+
+        $output = $emogrifier->parseInline($html, $css);
+
+        $expected_output = '<h1 style="font-size: 32px;">Hello world!</h1>';
+
+        $this->assertEquals($output, $expected_output);
+    }
 }
