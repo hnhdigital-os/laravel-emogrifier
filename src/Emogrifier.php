@@ -70,6 +70,10 @@ class Emogrifier extends OriginalEmogrifier
      */
     public function parseInline($html, $css = '')
     {
+        // Remove meta tags.
+        $html = preg_replace("/<meta.*?>(.*?)(<\/meta>)?/i", '', $html);
+
+        // Parse the html/css.
         $html = $this->parse($html, $css);
 
         // Remove any width setting.
@@ -86,7 +90,7 @@ class Emogrifier extends OriginalEmogrifier
         $html = preg_replace("/<html(.*?)>(.*?)<\/html>/is", '$2', $html);
 
         // Remove head tags.
-        $html = preg_replace("/<head(.*?)>(.*?)<\/head>/is", '$2', $html);
+        $html = preg_replace("/<head(.*?)>(.*?)<\/head>/is", '', $html);
 
         // Remove body tags.
         $html = preg_replace("/<body(.*?)>(.*?)<\/body>/is", '$2', $html);
@@ -94,20 +98,14 @@ class Emogrifier extends OriginalEmogrifier
         // Remove style tags.
         $html = preg_replace("/<style.*?>(.*?)<\/style>/is", '', $html);
 
-        // Remove title tag.
-        $html = preg_replace("/<title.*?>(.*?)<\/title>/is", '', $html);
-
-        // Remove meta tag.
-        $html = preg_replace('/<meta.*?>/im', '', $html);
-
         // Remove base tag.
         $html = preg_replace('/<base.*?>/im', '', $html);
 
         // Remove any class attributes.
-        $html = preg_replace('/<(.*?)class="(.*?)"(.*?)>/im', '<$1$3>', $html);
+        $html = preg_replace('/<(.*?) class="(.*?)"(.*?)>/im', '<$1$3>', $html);
 
         // Remove any id attributes.
-        $html = preg_replace('/<(.*?)id="(.*?)"(.*?)>/im', '<$1$3>', $html);
+        $html = preg_replace('/<(.*?) id="(.*?)"(.*?)>/im', '<$1$3>', $html);
 
         return trim($html);
     }

@@ -49,4 +49,24 @@ class EmogrifierTest extends TestCase
 
         $this->assertEquals($output, $expected_output);
     }
+
+    /**
+     * When the meta tag is present, and non-utf is present, it breaks.
+     * Added the meta tag removal before processing fixes this.
+     *
+     * @return void
+     */
+    public function testExample1()
+    {
+
+        $emogrifier = new Emogrifier();
+
+        $html = '<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body dir="auto">Hi there,&nbsp;<div>Apologies for not getting back to you - we’ve gone another way.</div><div id="AppleMailSignature">Sent from my iPhone</div>';
+
+        $output = $emogrifier->parseInline($html);
+
+        $expected_output = "Hi there, <div>Apologies for not getting back to you - we’ve gone another way.</div>\n<div>Sent from my iPhone</div>";
+
+        $this->assertEquals($output, $expected_output);
+    }
 }
