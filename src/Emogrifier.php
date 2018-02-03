@@ -26,4 +26,24 @@ class Emogrifier extends OriginalEmogrifier
 
         return $this->emogrify();
     }
+
+    /**
+     * Clean the html before parsing.
+     *
+     * This removes common issues that will cause Emogrifier to throw an exception.
+     *
+     * @param string $html
+     *
+     * @return string
+     */
+    public function setHtml($html)
+    {
+        $html = preg_replace('/<!--(.*?)-->/is', '', $html);
+        $html = preg_replace('/(v|o|w)\\\\:\*(.*?)$/im', '', $html);
+        $html = preg_replace('/content="(.*?)charset=(.*?);(.*?)"/im', 'content="charset=$2"', $html);
+        $html = preg_replace('/@-webkit-keyframes(.*?){(.*?)}/im', '', $html);
+        $html = preg_replace('/\* \[office365\](.*?){(.*?)}/im', '', $html);
+
+        parent::setHtml($html);
+    }
 }
