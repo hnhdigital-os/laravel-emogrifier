@@ -2,8 +2,8 @@
 
 namespace HnhDigital\Emogrifier;
 
-use Pelago\Emogrifier as OriginalEmogrifier;
 use ForceUTF8\Encoding;
+use Pelago\Emogrifier as OriginalEmogrifier;
 
 class Emogrifier extends OriginalEmogrifier
 {
