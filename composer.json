@@ -13,7 +13,7 @@
     "require": {
         "php": ">=7.1.0",
         "laravel/framework": ">=5.4",
-        "pelago/emogrifier": "2.0.0",
+        "pelago/emogrifier": "~2.0",
         "neitanod/forceutf8": "~2.0"
     },
     "require-dev": {
@@ -41,10 +41,10 @@
             "phpunit"
         ],
         "phpcs": [
-            "phpcs -p -s --standard=PSR2 ./src ./tests"
+            "phpcs -p -s --standard=PSR2 ./src"
         ],
         "phpmd": [
-            "phpmd ./src phpmd.xml"
+            "phpmd ./src text phpmd.xml"
         ]
     }
 }
